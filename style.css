@@ -263,6 +263,7 @@ body .dark-theme .btn-cross:hover {
         top: 30%;
         right: 7%;
         position: absolute;
+        padding:5px 5px;
     }
 
     /* .btn {
@@ -292,6 +293,7 @@ body .dark-theme .btn-cross:hover {
         width: 100px;
         color: red;
         right: 32%;
+        box-shadow: 0px 0px 10px black;
     }
 
 }
@@ -335,6 +337,7 @@ body .dark-theme .btn-cross:hover {
         width: 100px;
         color: red;
         right: 68%;
+        box-shadow: 0px 0px 15px black;
     }
 
 
@@ -359,9 +362,10 @@ body .dark-theme .btn-cross:hover {
 
     .calculator {
         top: 30%;
-        right: 10%;
+        right: 15%;
         position: absolute;
         width: 237px;
+        padding: 5px 0px;
     }
 
     .btn {
@@ -409,6 +413,7 @@ body .dark-theme .btn-cross:hover {
         width: 100px;
         color: red;
         right: 32%;
+        box-shadow: 0px 0px 8px black;
     }
 
 
@@ -445,11 +450,13 @@ body .dark-theme .btn-cross:hover {
         position: absolute !important;
         /* display: none; */
         /* font-size: 4rem; */
+        box-shadow: 0px 0px 15px black;
     }
 
 
 
 }
+
 
 
 
