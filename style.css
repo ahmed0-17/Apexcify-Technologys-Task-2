@@ -1,0 +1,456 @@
+/* Body background */
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, rgb(163, 163, 237), #a0c4ff, #caf0f8);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    vertical-align: none;
+}
+
+/* Toggle container */
+.toggle-container {
+    display: flex;
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    gap: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Switch design */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 25px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 3.5px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+/* When checked */
+input:checked+.slider {
+    background-color: #4cafef;
+}
+
+input:checked+.slider:before {
+    transform: translateX(24px);
+}
+
+
+.date {
+    position: relative;
+    bottom: 0%;
+    right: 60%;
+    width: 300px;
+    font-size: larger;
+    /* margin-right: 20px; */
+}
+
+.time {
+    position: relative;
+    top: 5%;
+    right: 28%;
+    width: 100px;
+
+    padding: 0px 15px;
+    background-color: black;
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* theme */
+
+/* Default Light Theme */
+.calculator {
+    background: linear-gradient(135deg, rgb(7, 7, 58), #dceeff, #79b4d2);
+    transition: background 0.5s ease;
+    color: #0f2027;
+}
+
+.calculator {
+    /* background: rgba(255, 255, 255, 0.35); */
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease;
+    color: black;
+    position: relative;
+    right: 10%;
+
+
+}
+
+
+body .btn-cross:hover {
+    background: rgba(255, 0, 0, 0.3);
+    color: #fff;
+    box-shadow: 0px 0px 10px 0px rgb(255, 0, 0);
+}
+
+
+/* Dark Theme */
+body.dark-theme {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+body.dark-theme .calculator {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(100px);
+    /* backdrop-filter: blur(15px); */
+    color: #00eaff;
+}
+
+body.dark-theme .date {
+    text-shadow: 0px 0px 20px #00eaff;
+    color: #1eecff;
+}
+
+body.dark-theme .btn {
+    background: rgba(255, 255, 255, 0.15);
+    color: #00eaff;
+    border: 1px solid rgba(0, 234, 255, 0.3);
+}
+
+body.dark-theme .btn:hover {
+    background: rgba(0, 234, 255, 0.2);
+    transform: scale(1.05);
+}
+
+body .dark-theme .btn-cross:hover {
+    box-shadow: 0px 0px 10px #00eaff;
+}
+
+/* Calculator glass effect */
+.calculator {
+    width: 320px;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+/* Display */
+.display {
+    /* background: rgba(255, 255, 255, 0.15); */
+    /* border-radius: 12px; */
+    padding: 15px;
+    text-align: right;
+    color: #fff;
+    /* box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2); */
+}
+
+.expression {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.result {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 5px;
+    transition: text 0.3s ease-out;
+    transform: rotateX('180deg');
+}
+
+/* Keys grid */
+.keys {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+/* Buttons */
+.btn {
+    background: rgba(255, 255, 255, 0.25);
+    border: none;
+    border-radius: 12px;
+    padding: 15px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: bold;
+    margin: 10px 5px;
+    height: 60px;
+
+    cursor: pointer;
+    width: 60px;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* margin: 0px 5px; */
+    padding: 15px 15px;
+}
+
+.btn:hover {
+    box-shadow: 0px 0px 10px rgb(0, 183, 255);
+    /* background-color: rgb(255, 255, 255); */
+}
+
+.none {
+    display: hide;
+    width: 130px;
+
+}
+
+/* Wide button for 0 */
+.btn-wide {
+
+    width: 125px;
+}
+
+
+.btn:active {
+    transform: scale(0.95);
+    /* box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3); */
+}
+
+
+/* media */
+@media (max-width: 545px) {
+
+    .toggle-container {
+        display: flex;
+        position: absolute;
+        top: 3%;
+        right: 5%;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+        gap: 10px;
+        color: white;
+        font-weight: bold;
+    }
+
+    .calculator {
+        top: 30%;
+        right: 7%;
+        position: absolute;
+    }
+
+    /* .btn {
+        /* margin: 10px 10px; */
+    /* box-sizing: border-box; 
+    } */
+
+    .keys {
+        margin: 0px 5px;
+    }
+
+
+    .date {
+        /* display: none; */
+        position: absolute;
+        font-size: 2.3rem;
+        top: 12%;
+        right: 35%;
+        width: 200px;
+        padding: 0px 15px;
+    }
+
+    .time {
+        /* display: none; */
+        top: 20%;
+        position: absolute;
+        width: 100px;
+        color: red;
+        right: 32%;
+    }
+
+}
+
+@media (min-width: 600px) and (max-width: 1019px) {
+
+
+    .toggle-container {
+        display: flex;
+        position: absolute;
+        top: 10%;
+        right: 5%;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+        gap: 10px;
+        color: white;
+        font-weight: bold;
+    }
+
+    .calculator {
+        top: 30%;
+        right: 7%;
+        position: absolute;
+    }
+
+    .date {
+        /* display: none; */
+        position: absolute;
+        font-size: 4rem;
+        top: 40%;
+        right: 60%;
+        width: 200px;
+        padding: 0px 15px;
+    }
+
+    .time {
+        /* display: none; */
+        top: 67%;
+        position: absolute;
+        width: 100px;
+        color: red;
+        right: 68%;
+    }
+
+
+
+}
+
+
+@media (max-width:380px) {
+
+    .toggle-container {
+        display: flex;
+        position: absolute;
+        top: 3%;
+        right: 5%;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 15px;
+        gap: 10px;
+        color: white;
+        font-weight: bold;
+    }
+
+    .calculator {
+        top: 30%;
+        right: 10%;
+        position: absolute;
+        width: 237px;
+    }
+
+    .btn {
+        background: rgba(255, 255, 255, 0.25);
+        border: none;
+        border-radius: 12px;
+        padding: 5px 10px;
+        font-size: 1rem;
+        color: #ffffff;
+        font-weight: bold;
+        margin: 10px 5px;
+        height: 40px;
+
+        cursor: pointer;
+        width: 45px;
+        transition: all 0.25s ease;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        /* margin: 0px 5px; */
+        /* padding: 15px 15px; */
+
+    }
+
+    .btn-wide {
+        width: 100px;
+    }
+
+    .btn-ac {
+        width: 100px;
+    }
+
+    .date {
+        /* display: none; */
+        position: absolute;
+        font-size: 2rem;
+        top: 12%;
+        right: 30%;
+        width: 200px;
+        padding: 0px 15px;
+    }
+
+    .time {
+        /* display: none; */
+        top: 20%;
+        position: absolute;
+        width: 100px;
+        color: red;
+        right: 32%;
+    }
+
+
+
+
+
+}
+
+@media (min-width:1020px) and (max-width:1030px) {
+
+    .calculator {
+
+        right: 25%;
+        padding: 0px 20px;
+        position: absolute;
+        /* width: 400px; */
+
+    }
+
+    #date {
+        right: 70%;
+        top: 50%;
+        /* position: absolute !important; */
+        /* display: none; */
+        /* font-size: 4rem; */
+
+        margin-right: 20px;
+
+    }
+
+    .time {
+        right: 67%;
+        top: 52%;
+        position: absolute !important;
+        /* display: none; */
+        /* font-size: 4rem; */
+    }
+
+
+
+}
+
+
+
+

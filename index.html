@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+
+    </head>
+
+<body>
+    <!-- Theme Toggle -->
+<div class="toggle-container">
+  <label class="switch">
+    <input type="checkbox" id="themeToggle">
+    <span class="slider"></span>
+  </label>
+  <span class="toggle-label">Light Mode</span>
+</div>
+
+
+  <h1><div class="date" id="date"></div></h1>
+  <div class="time" id="time"></div>
+
+
+
+    <main class="calculator">
+        
+        <section class="display">
+            <div id="expression" class="expression"></div>
+            <div id="result" class="result">0</div>
+        </section>
+
+        <!-- Keys -->
+        <section class="keys">
+            <!-- Row: AC and × on top -->
+            <button class="btn btn-ac none"id="ac">AC</button>
+            <button class="btn btn-cross"id="remove">x</button>
+            <button class=" btn" id="multiply">*</button>
+
+            <!-- Row: 7 8 9 ÷ -->
+            <button class="btn"id="seven">7</button>
+            <button class="btn"id="eight">8</button>
+            <button class="btn"id="nine">9</button>
+            <button class="btn "id="divide">/</button>
+
+            <!-- Row: 4 5 6 − -->
+            <button class="btn"id="four">4</button>
+            <button class="btn"id="five">5</button>
+            <button class="btn"id="six">6</button>
+            <button class="btn btn-op"id="subtract">−</button>
+
+            <!-- Row: 1 2 3 + -->
+            <button class="btn"id="one">1</button>
+            <button class="btn"id="two">2</button>
+            <button class="btn"id="three">3</button>
+            <button class="btn btn-op add"id="add">+</button>
+
+            <!-- Row: 0 . = -->
+            <button class="btn btn-wide"id="zero">0</button>
+            <button class="btn"id="dot">.</button>
+            <button class="btn btn-eq"id="equal">=</button>
+        </section>
+    </main>
+    <footer>
+        <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="script.js"></script>
+</body>
+
+</html>
